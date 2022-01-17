@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/marvel/static/css/main.084869a7.css",
+    "main.js": "/marvel/static/js/main.c6cf5f4b.js",
+    "static/media/comics.jpg": "/marvel/static/media/comics.d1d18e4057a11f06d3bb.jpg",
+    "index.html": "/marvel/index.html",
+    "main.084869a7.css.map": "/marvel/static/css/main.084869a7.css.map",
+    "main.c6cf5f4b.js.map": "/marvel/static/js/main.c6cf5f4b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.084869a7.css",
+    "static/js/main.c6cf5f4b.js"
+  ]
+}
