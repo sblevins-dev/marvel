@@ -1,14 +1,96 @@
 .home-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
     color: rgb(0, 0, 0);
-    font-size: 1rem;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
-.card {
+.char-card {
+    height: 130px;
+    width: 175px;
+    margin: 20px;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+}
+
+.char-card:hover {
+    transform: scale(1.1);
+}
+
+.char-img {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.char-name {
+    font-size: .8rem;
+    color: white;
+}
+
+.comic-card-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.comic-card {
+    margin: 20px;
+    transition: .2s all ease-in-out;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.comic-card:hover {
+    transform: scale(1.1);
+}
+
+.no-image {
+    background-color: black;
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading {
+    color: white;
+    font-size: 1rem;
+}
+
+.active {
+    background-color: black;
+}
+
+@media (max-width: 500px) {
+    .char-img {
+        width: 250px;
+        height: auto;
+    }
+
+    .home-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .comic-card-wrapper {
+        margin: 0;
+        align-items: center;
+    }
+}
+
+
+/* .card {
     width: 300px;
     height: 400px;
     background-color: rgb(250, 250, 250);
@@ -25,4 +107,4 @@
 
 .card:hover {
     transform: scale(1.1);
-}
+} */

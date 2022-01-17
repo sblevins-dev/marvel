@@ -1,19 +1,23 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import '../css/nav.css'
 
 export const Navbar = (props) => {
+
+
+    const searchChar = e => {
+        e.preventDefault();
+        props.search();
+    }
     return (
         <>
         <div className="nav-container">
-            <div className='logo'>MARVEL APP</div>
-            {/* <ul className='link-wrapper'>
-                <li><Link to='/' className='link'>Home</Link></li>
-                <li><Link to='/characters' className='link'>Characters</Link></li>
-            </ul> */}
+            <div className='logo'>MARVEL</div>
+            <p className="info">Character Search</p>
         </div>
-        <div className='search-container' placeholder='Search...'>
-            <input type='search' onChange={input => props.search(input)}></input>
+        <div className='search-container' >
+                <input type='text' placeholder='Search...' onChange={props.searchInput}></input>
+                <button type="submit" onClick={searchChar}>Submit</button>
+            
         </div>
         </>
         

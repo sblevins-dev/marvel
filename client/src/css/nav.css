@@ -7,13 +7,20 @@
   margin-top: 20px;
   justify-content: center;
   padding: 10px;
+  z-index: 1;
 }
 
 .logo {
     font-size: 1.7rem;
-    color: rgb(199, 0, 0);
+    background-color: red;
+    padding: 0 10px;
+    color: white;
     font-weight: 600;
     margin-bottom: 20px;
+}
+
+.info {
+  color: white;
 }
 
 .link-wrapper {
@@ -37,15 +44,13 @@
   text-align: center;
   margin: 40px 0;
   border: none;
+  z-index: 1;
 }
 
-.search-container [type='search'] {
+.search-container [type="search"] {
   width: 200px;
   border: 1px solid black;
   border-radius: 5px;
   padding: 10px;
-}
-
-.search {
-  border: 1px solid black;
+  color: black;
 }
