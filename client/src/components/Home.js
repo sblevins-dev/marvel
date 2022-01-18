@@ -15,7 +15,7 @@ export const Home = (props) => {
     <div className="home-container">
       {characters.length > 0 ? (
         characters.map(char => (
-          <div key={char.id} className="char-card">
+          <div key={char.id} className="char-card" onClick={() => props.setActive(char)}>
           <img
             className="char-img"
             alt={char.name}

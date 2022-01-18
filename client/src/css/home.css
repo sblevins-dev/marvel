@@ -5,6 +5,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 20px;
 }
 
 .char-card {
@@ -73,10 +74,7 @@
 }
 
 @media (max-width: 500px) {
-    .char-img {
-        width: 250px;
-        height: auto;
-    }
+
 
     .home-container {
         justify-content: center;
