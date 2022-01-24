@@ -67,6 +67,7 @@
 .loading {
     color: white;
     font-size: 1rem;
+    z-index: 1;
 }
 
 .active {
@@ -79,6 +80,13 @@
     .home-container {
         justify-content: center;
         align-items: center;
+    }
+
+    .char-card {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+        text-align: center;
     }
 
     .comic-card-wrapper {

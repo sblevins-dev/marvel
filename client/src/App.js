@@ -9,7 +9,8 @@ function App() {
   const [searchInput, setSearchInput] = useState("");
   const [characters, setCharacters] = useState([]);
   const [isCharActive, setIsCharActive] = useState(false);
-  const [activeChar, setActiveChar] = useState()
+  const [activeChar, setActiveChar] = useState();
+  const [isSearching, setIsSearching] = useState(false);
 
   const handleChange = (e) => {
     setSearchInput(e.target.value);
@@ -17,6 +18,7 @@ function App() {
 
   const submit = () => {
     const name = searchInput;
+    setIsSearching(true);
     const options = {
       method: "GET",
       url: "https://sb-marvel-backend.herokuapp.com/characterSearch",
@@ -26,7 +28,6 @@ function App() {
     axios
       .request(options)
       .then((response) => {
-        console.log(response)
         setCharacters(response.data)
       })
       .catch((err) => {
@@ -47,7 +48,7 @@ function App() {
   return (
     <div className="App">
       <Navbar search={submit} searchInput={handleChange} />
-      {!isCharActive && <Home characters={characters} setActive={char} /> }
+      {!isCharActive && <Home characters={characters} setActive={char} isSearching={isSearching} /> }
       {isCharActive && <Character char={activeChar} back={backToHome} />}
     </div>
   );

@@ -2,7 +2,12 @@ import React from "react";
 import "../css/character.css";
 
 export const Character = ({ char, back }) => {
-  console.log(char);
+  const detailUrl = char.urls[1].url.split('?')[0];
+
+  const handleClick = () => {
+    window.open(detailUrl, "_blank");
+  }
+
   return (
     <div id={char.id} className="char-container">
       <button className="back-btn" onClick={() => back()}>
@@ -14,13 +19,19 @@ export const Character = ({ char, back }) => {
           <img
             className="char-img"
             alt={char.name}
-            src={`${char.thumbnail.path}/landscape_incredible.jpg`}
+            src={`${char.thumbnail.path}/landscape_large.jpg`}
           />
         </div>
-        {char.description != "" ? (
-          <p className="char-desc">{char.description}</p>
+        {char.description !== "" ? (
+          <div className="char-desc">
+            <p>{char.description}</p>
+            <br></br>
+            <p className="char-link" onClick={handleClick}>Click here to view detail on marvel.com</p>
+          </div>
         ) : (
-          <p className="char-desc">No Description</p>
+          <div className="char-desc">
+            <p className="char-link" onClick={handleClick}>Click here to view detail on marvel.com</p>
+          </div>
         )}
       </div>
     </div>

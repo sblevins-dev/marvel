@@ -3,7 +3,6 @@ import "../css/home.css";
 
 export const Home = (props) => {
   const [characters, setCharacters] = useState([]);
-  // const [hover, setHover] = useState(false);
 
   useEffect(() => {
     if (props.characters.length > 0) {
@@ -26,6 +25,7 @@ export const Home = (props) => {
       ))
         
       ) : (
+        props.isSearching && 
         <div className="loading">
           Loading Characters
         </div>
