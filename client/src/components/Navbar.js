@@ -22,7 +22,7 @@ export const Navbar = (props) => {
           Submit
         </button>
       </div>
-      <a href="https://marvel.com" className="data-attribution">Data provided by Marvel. © 2014 Marvel</a>
+      <a href="https://marvel.com" target="_blank" className="data-attribution">Data provided by Marvel. © 2014 Marvel</a>
     </>
   );
 };
