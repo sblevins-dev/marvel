@@ -11,6 +11,7 @@ function App() {
   const [isCharActive, setIsCharActive] = useState(false);
   const [activeChar, setActiveChar] = useState();
   const [isSearching, setIsSearching] = useState(false);
+  const [doneSearching, setIsDoneSearching] = useState(false);
 
   const handleChange = (e) => {
     setSearchInput(e.target.value);
@@ -28,7 +29,10 @@ function App() {
     axios
       .request(options)
       .then((response) => {
+        setIsCharActive(false)
         setCharacters(response.data)
+        setIsSearching(false);
+        setIsDoneSearching(true);
       })
       .catch((err) => {
         console.log(err);
@@ -48,7 +52,7 @@ function App() {
   return (
     <div className="App">
       <Navbar search={submit} searchInput={handleChange} />
-      {!isCharActive && <Home characters={characters} setActive={char} isSearching={isSearching} /> }
+      {!isCharActive && <Home characters={characters} setActive={char} isSearching={isSearching} isDoneSearching={doneSearching} /> }
       {isCharActive && <Character char={activeChar} back={backToHome} />}
     </div>
   );
